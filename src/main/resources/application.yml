@@ -1,0 +1,33 @@
+server:
+  servlet:
+    context-path: /financeiro-backend
+  port: 8080
+spring:
+  application:
+    name: financeiro
+  profiles:
+    active: dev
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        jdbc:
+          lob:
+            non_contextual_creation: true
+  datasource:
+    platform: postgres
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/financeiro
+    username: postgres
+    password: postgres
+  liquibase:
+    enabled: true
+    changeLog: classpath:db/changelog/db.changelog-master.yaml
+  jackson:
+    deserialization:
+      fail-on-unknown-properties: false
+    serialization:
+      fail-on-empty-beans: false

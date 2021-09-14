@@ -1,0 +1,35 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: David Jeremias
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                  name: id
+                  type: BIGINT
+              - column:
+                  constraints:
+                    nullable: false
+                  name: nome
+                  type: varchar(100)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: valorOriginal
+                  type: decimal
+              - column:
+                  constraints:
+                    nullable: false
+                  name: dataVencimento
+                  type: date
+              - column:
+                  constraints:
+                    nullable: false
+                  name: dataPagamento
+                  type: date
+            tableName: conta_a_pagar

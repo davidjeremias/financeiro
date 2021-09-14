@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: financeiro-deployment
+  labels:
+    app: financeiro
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: financeiro
+  template:
+    metadata:
+      labels:
+        app: financeiro
+    spec:
+      containers:
+        - name: financeiro-container
+          image: dvvdoficial/financeiro
+          ports:
+            - containerPort: 8080
