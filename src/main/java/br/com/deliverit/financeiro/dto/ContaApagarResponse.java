@@ -18,6 +18,8 @@ public class ContaApagarResponse implements Serializable {
     private Long id;
     private String nome;
     private Double valorOriginal;
+    private Double valorCorrigido;
     private LocalDate dataVencimento;
     private LocalDate dataPagamento;
+    private Long diasAtraso;
 }

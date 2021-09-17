@@ -4,7 +4,6 @@ import lombok.*;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.time.LocalDate;
 
 @Getter
 @Setter
@@ -13,10 +12,10 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Entity
-@Table(name = "conta_a_pagar")
-public class ContaApagar implements Serializable {
+@Table(name = "acrescimo")
+public class Acrescimo implements Serializable {
 
-    private static final long serialVersionUID = -5305426995443250674L;
+    private static final long serialVersionUID = -1172847896673123530L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -27,12 +26,9 @@ public class ContaApagar implements Serializable {
     @Column(name = "nome")
     private String nome;
 
-    @Column(name = "valor_original")
-    private Double valorOriginal;
+    @Column(name = "multa")
+    private Double multa;
 
-    @Column(name = "data_vencimento")
-    private LocalDate dataVencimento;
-
-    @Column(name = "data_pagamento")
-    private LocalDate dataPagamento;
+    @Column(name = "juros_dia")
+    private Double jurosDia;
 }

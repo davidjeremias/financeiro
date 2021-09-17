@@ -1,0 +1,51 @@
+databaseChangeLog:
+  - changeSet:
+      id: 3
+      author: David Jeremias
+      changes:
+        - insert:
+            tableName: acrescimo
+            columns:
+              - column:
+                  name: id
+                  value: 1
+              - column:
+                  name: nome
+                  value: "ate 3 dias"
+              - column:
+                  name: multa
+                  value: 2.0
+              - column:
+                  name: juros_dia
+                  value: 0.1
+        - insert:
+            tableName: acrescimo
+            columns:
+              - column:
+                  name: id
+                  value: 2
+              - column:
+                  name: nome
+                  value: "superior a 3 dias"
+              - column:
+                  name: multa
+                  value: 3.0
+              - column:
+                  name: juros_dia
+                  value: 0.2
+        - insert:
+            tableName: acrescimo
+            columns:
+              - column:
+                  name: id
+                  value: 3
+              - column:
+                  name: nome
+                  value: "superior a 5 dias"
+              - column:
+                  name: multa
+                  value: 5.0
+              - column:
+                  name: juros_dia
+                  value: 0.3
+

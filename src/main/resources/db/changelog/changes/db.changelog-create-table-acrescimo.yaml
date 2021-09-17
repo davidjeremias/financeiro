@@ -1,6 +1,6 @@
 databaseChangeLog:
   - changeSet:
-      id: 1
+      id: 2
       author: David Jeremias
       changes:
         - createTable:
@@ -16,20 +16,15 @@ databaseChangeLog:
                   constraints:
                     nullable: false
                   name: nome
-                  type: varchar(100)
+                  type: varchar(20)
               - column:
                   constraints:
                     nullable: false
-                  name: valor_original
+                  name: multa
                   type: decimal
               - column:
                   constraints:
                     nullable: false
-                  name: data_vencimento
-                  type: date
-              - column:
-                  constraints:
-                    nullable: false
-                  name: data_pagamento
-                  type: date
-            tableName: conta_a_pagar
+                  name: juros_dia
+                  type: decimal
+            tableName: acrescimo

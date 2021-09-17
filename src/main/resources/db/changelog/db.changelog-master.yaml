@@ -1,3 +1,7 @@
 databaseChangeLog:
   - include:
       file: db/changelog/changes/db.changelog-create-table-conta-a-pagar.yaml
+  - include:
+      file: db/changelog/changes/db.changelog-create-table-acrescimo.yaml
+  - include:
+      file: db/changelog/changes/db.changelog-insert-acrescimo.yaml
